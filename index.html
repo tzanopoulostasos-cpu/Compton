@@ -1,4 +1,205 @@
- <!-- ΕΝΟΤΗΤΑ Γ — ΣΥΓΚΡΙΤΙΚΟΣ ΠΙΝΑΚΑΣ -->
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Όταν το Φως Συναντά την Ύλη — Εκτυπώσιμη Έκδοση</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #2c3e50;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 30px 35px;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            border: 1px solid #eef2f5;
+        }
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            line-height: 1.3;
+            font-family: 'Minion Pro Med', serif;
+            letter-spacing: 0.5px;
+        }
+        h2 {
+            text-align: center;
+            color: #2b6cb0;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: -5px;
+            margin-bottom: 15px;
+            font-family: 'Caveat', cursive;
+        }
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #718096;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 22px;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+        .intro {
+            font-size: 1.15rem;
+            color: #4a5568;
+            margin-bottom: 30px;
+            background: #f8faff;
+            padding: 18px 22px;
+            border-radius: 18px;
+            border-left: 4px solid #6c8ebf;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 18px 22px;
+            border-radius: 20px;
+        }
+        .section-a { background: #f9fcff; border: 1px solid #c5d8eb; }
+        .section-b { background: #fafff9; border: 1px solid #b8d9b8; }
+        .section-c { background: #faf8fc; border: 1px solid #d2c4e6; }
+        .section-d { background: #fdfaf5; border: 1px solid #e6cdb0; }
+        .section h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .section-a h3 { color: #2a6b9e; }
+        .section-b h3 { color: #2d7a4a; }
+        .section-c h3 { color: #6b4c8a; }
+        .section-d h3 { color: #a8692c; }
+        .highlight-box {
+            padding: 14px 20px;
+            border-radius: 14px;
+            margin: 16px 0;
+        }
+        .highlight-blue { background: #e8f4f8; border-left: 5px solid #4a8bb7; }
+        .highlight-green { background: #ecf9ec; padding: 10px 16px; border-radius: 12px; }
+        .highlight-beige { background: #f5ede4; padding: 12px 18px; text-align: center; border-radius: 16px; border: 1px solid #e2d3c0; }
+        .highlight-warm { background: #f9efe8; padding: 14px 20px; text-align: center; border-radius: 16px; border: 1px solid #e5cfbc; }
+        .gradient-badge {
+            background: linear-gradient(135deg, #e8dccc, #dac6b0);
+            padding: 12px 18px;
+            text-align: center;
+            border-radius: 40px;
+            margin: 16px 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4d351b;
+        }
+        .gradient-badge span {
+            background: #4d351b;
+            color: #f5ede4;
+            padding: 2px 16px;
+            border-radius: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin: 15px 0;
+        }
+        thead tr {
+            background: linear-gradient(135deg, #4a6f9e, #2b4e75);
+            color: white;
+        }
+        th {
+            padding: 14px;
+        }
+        th:first-child { border-radius: 16px 0 0 0; }
+        th:last-child { border-radius: 0 16px 0 0; }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:nth-child(even) { background-color: #f9faff; }
+        tr:nth-child(odd) { background-color: #ffffff; }
+        tr:last-child td { border-bottom: none; }
+        .footer {
+            border-top: 2px dashed #dce3ec;
+            margin-top: 45px;
+            padding-top: 25px;
+            text-align: center;
+            color: #718096;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #2b6cb0, #1a365d);
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(43, 108, 176, 0.35);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            border: 2px solid rgba(255,255,255,0.1);
+            margin: 20px 0 10px 0;
+        }
+        .download-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(43, 108, 176, 0.5);
+        }
+        @media print {
+            .download-btn { display: none; }
+            body { box-shadow: none; border: none; margin: 0; padding: 20px; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⚛️ Όταν το Φως Συναντά την Ύλη</h1>
+    <h2>Ο Μύθος του Ακίνητου Ηλεκτρονίου και η Μαγεία του Compton</h2>
+    <p class="subtitle">«Η Φυσική δεν είναι απλώς μαθηματικές εξισώσεις. Είναι η ιστορία της αλληλεπίδρασης του Σύμπαντος με τον εαυτό του.»</p>
+
+    <!-- ΕΙΣΑΓΩΓΗ -->
+    <div class="intro">
+        Φανταστείτε δύο αόρατους πρωταγωνιστές: ένα υψηλής ενέργειας φωτόνιο <strong>\(120 \text{ keV}\)</strong> (σκληρές ακτίνες Χ) και ένα ηλεκτρόνιο, προστατευμένο στο εσωτερικό της ύλης. 
+        Αυτό που ακολουθεί δεν είναι μια τυπική κλασική σύγκρουση. Είναι μια κβαντική ανταλλαγή ορμής και ενέργειας που αλλάζει για πάντα τη συχνότητα και την πορεία του φωτός — σαν ένας χορός όπου οι ρόλοι αντιστρέφονται και τίποτα δεν μένει ως είχε.
+    </div>
+
+    <!-- ΕΝΟΤΗΤΑ Α -->
+    <div class="section section-a">
+        <h3>🔹 Α) Ποιον συναντά το Φωτόνιο;</h3>
+        <p>Για να εκδηλωθεί το <strong>Φαινόμενο Compton</strong> – αυτή η μυστηριώδης αλλαγή κατεύθυνσης και «χρώματος» του φωτός – το φωτόνιο πρέπει να αλληλεπιδράσει με ένα <strong>ελεύθερο ή ασθενώς δεσμευμένο ηλεκτρόνιο</strong>.</p>
+        <p>Πώς όμως θεωρείται ένα ηλεκτρόνιο «ελεύθερο» μέσα σε ένα στερεό; Όταν η ενέργεια του προσπίπτοντος φωτονίου (\(h\nu = 120 \text{ keV}\)) είναι <strong>πολύ μεγαλύτερη</strong> από την ενέργεια δέσμευσης του ηλεκτρονίου στο άτομο (\(E_{\text{δεσμ}} \sim \text{eV}\)), τα δεσμά του ατόμου γίνονται πρακτικά αόρατα. Το φωτόνιο συναντά το ηλεκτρόνιο σαν να ήταν πλάσμα ελεύθερο, χωρίς αλυσίδες.</p>
+        <div class="highlight-box highlight-blue">
+            <p style="margin: 0; color: #1a4e6b; font-weight: 600;">💡 Ουσία:</p>
+            <p style="margin: 5px 0 0 0; color: #1f5a7a;">Αν η ενέργεια του φωτονίου ήταν συγκρίσιμη με αυτή της δέσμευσης (\(h\nu \approx E_{\text{δεσμ}}\)), τότε το φωτόνιο θα απορροφούνταν ολικά — και θα μιλούσαμε για το <strong>Φωτοηλεκτρικό Φαινόμενο</strong>. Στα \(120 \text{ keV}\), όμως, ο θρόνος ανήκει στη σκέδαση Compton.</p>
+        </div>
+    </div>
+
+    <!-- ΕΝΟΤΗΤΑ Β -->
+    <div class="section section-b">
+        <h3>🔹 Β) Το «Ψέμα» της Ακινησίας και η Κβαντική Πραγματικότητα</h3>
+        <p><em>«Είναι το ηλεκτρόνιο πραγματικά ακίνητο πριν τη σύγκρουση;»</em> Η απάντηση μάς προσκαλεί να αφήσουμε πίσω μας την κλασική διαίσθηση — γιατί η Κβαντική Μηχανική έχει τους δικούς της, βαθύτερους κανόνες. Το ηλεκτρόνιο <strong>δεν είναι ακίνητο</strong>.</p>
+        <ul style="padding-left: 22px;">
+            <li><strong>Μια αέναη εσωτερική κίνηση:</strong> Ακόμη και στη θεμελιώδη κατάσταση ενός ατόμου, το ηλεκτρόνιο δεν παύει να «χορταίνει» την αβεβαιότητά του. Η Αρχή του Heisenberg (\(\Delta x \cdot \Delta p \ge \frac{\hbar}{2}\)) μάς θυμίζει πως η φύση δεν επιτρέπει απόλυτη ηρεμία.</li>
+            <li><strong>Θερμική ανάσα:</strong> Η θερμική κινητική ενέργεια (\(k_B T \approx 0{,}025 \text{ eV}\)) είναι τόσο μικροσκοπική μπροστά στην ενέργεια του φωτονίου, που μοιάζει με ψίθυρο μέσα σε μια συμφωνία.</li>
+        </ul>
+        <p><strong>Γιατί, λοιπόν, το υποθέτουμε ακίνητο (\(\vec{p}_e = 0\));</strong><br> Επειδή η ορμή του φωτονίου των \(120 \text{ keV}\) είναι τόσο συντριπτικά μεγαλύτερη, που η αρχική κίνηση του ηλεκτρονίου χάνεται μέσα στον θόρυβο των υπολογισμών. Η παραδοχή αυτή είναι ένα <strong>ωφέλιμο μαθηματικό εργαλείο</strong> — μια προσέγγιση που απλοποιεί την περιγραφή χωρίς να αλλοιώνει την ουσία του φαινομένου.</p>
+        <div class="highlight-green">
+            ✦ <em>(Η αρχική ορμή του ηλεκτρονίου, ωστόσο, προκαλεί μια μικρή «θολούρα» στη σκέδαση — γνωστή ως <strong>Compton broadening</strong>, μια υπενθύμιση ότι η πραγματικότητα είναι πάντα πιο πλούσια από τα μοντέλα μας.)</em>
+        </div>
+    </div>
+
+    <!-- ΕΝΟΤΗΤΑ Γ — ΣΥΓΚΡΙΤΙΚΟΣ ΠΙΝΑΚΑΣ -->
     <div class="section section-c">
         <h3>📊 Γ) Συγκριτικός Πίνακας: Φωτοηλεκτρικό vs Compton</h3>
         <div style="overflow-x: auto; margin: 15px 0;">
@@ -45,3 +246,54 @@
             </table>
         </div>
     </div>
+
+    <!-- ΕΝΟΤΗΤΑ Δ -->
+    <div class="section section-d">
+        <h3>🔹 Δ) Ποσοτικός Υπολογισμός: Η Μέγιστη Μετατόπιση</h3>
+        <p>Η αλλαγή στο μήκος κύματος είναι η «σφραγίδα» της συνάντησης και δίνεται από την ιερή εξίσωση του Compton: $$\Delta \lambda = \lambda' - \lambda = \lambda_c (1 - \cos\theta)$$ όπου \(\lambda_c = \frac{h}{m_e c} \approx 2{,}43 \times 10^{-3} \text{ nm}\) — η σταθερά που θυμίζει ότι ακόμη και το φως υποκύπτει στην ορμή της ύλης.</p>
+
+        <h4 style="color: #a8692c; margin-top: 25px;">📌 1. Μέγιστη Αύξηση Μήκους Κύματος (\(\Delta\lambda_{\max}\))</h4>
+        <p>Η μεγαλύτερη δυνατή αλλαγή συμβαίνει όταν το φωτόνιο κάνει στροφή 180° — σαν να γυρίζει πίσω για να κοιτάξει τον εαυτό του. Τότε \(\cos 180^\circ = -1\), οπότε:</p>
+        <div class="highlight-beige">
+            <span style="font-weight: 600; color: #7a512a; font-size: 1.05rem;">
+                \(\Delta \lambda_{\max} = 2 \cdot \lambda_c = 4{,}86 \times 10^{-3} \text{ nm}\)
+            </span>
+        </div>
+        <p>Το αρχικό μήκος κύματος για \(E = 120 \text{ keV}\) είναι \(\lambda = \frac{hc}{E} \approx 0{,}01033 \text{ nm}\).</p>
+        <div class="gradient-badge">
+            ✦ Το μήκος κύματος αυξάνεται έως και <span>47%</span> ✦
+        </div>
+
+        <h4 style="color: #a8692c; margin-top: 30px;">📌 2. Τι Σημαίνει Αυτό για την Ενέργεια;</h4>
+        <p>Το νέο μήκος κύματος του σκεδαζόμενου φωτονίου είναι: $$\lambda' = 0{,}01033 + 0{,}00486 = 0{,}01519 \text{ nm}$$ και η νέα του ενέργεια: $$E' = \frac{1240}{0{,}01519} \approx 81{,}63 \text{ keV}$$</p>
+        <p>Η διαφορά, \( \Delta E = 120 - 81{,}63 = 38{,}37 \text{ keV}\), είναι η ενέργεια που μεταφέρεται στο ηλεκτρόνιο — σαν ένα δώρο ορμής που το εκτοξεύει.</p>
+        <div class="highlight-warm">
+            <span style="font-weight: 600; color: #7a3e1a; font-size: 1.05rem;">
+                Το φωτόνιο χάνει έως και <strong>32%</strong> της ενέργειάς του — η πιο γενναιόδωρη μεταφορά ενέργειας στη φύση!
+            </span>
+        </div>
+    </div>
+
+    <!-- ΕΠΙΛΟΓΟΣ -->
+    <div class="footer">
+        <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 10px; font-family: 'Caveat', cursive; color: #2c3e50;">
+            «Το φωτόνιο που σκεδάζεται δεν χάνει απλώς ενέργεια· κουβαλά για πάντα την ανεξίτηλη υπογραφή της κβαντικής του συνάντησης με την ύλη.»
+        </p>
+        <p style="font-size: 0.95rem; color: #8a9bae;">— Γιατί κάθε σκέδαση είναι και μια ιστορία που αξίζει να ειπωθεί.</p>
+        
+        <a href="#" onclick="window.print(); return false;" class="download-btn">
+            🖨️ Εκτύπωση / Αποθήκευση ως PDF
+        </a>
+        <p style="font-size: 0.85rem; color: #a0aec0; margin-top: 8px;">
+            (Χρησιμοποιήστε την επιλογή «Αποθήκευση ως PDF» στο παράθυρο εκτύπωσης)
+        </p>
+
+        <div style="margin-top:35px; text-align:center; font-size:0.95rem; color:#6a7b8c; padding-top:20px; border-top:1px solid #e2e8f0;">
+            <span style="letter-spacing:0.5px; font-weight:500;">
+                Επιμέλεια & Ανάλυση: © Τάσος Τζανόπουλος — Για τη Διδασκαλία της Σύγχρονης Φυσικής
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
